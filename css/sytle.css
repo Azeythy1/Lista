@@ -51,6 +51,7 @@ main .title{
     padding: 30px 50px;
 }
 main .card{
+    width: 380px;
     max-width: 400px;
 	margin: 3px auto;
     background-color: #839fdb54;
@@ -59,7 +60,7 @@ main .card{
     border-radius: 7px;
     box-shadow: 2px 2px 2px 2px #7684ac;
     justify-content: center;
-    height: 80vh;
+    height: 70vh;
 
 }
 main .card #topo{
