@@ -13,8 +13,9 @@
 <body>
    
     <header>
-        <a href="index.html">Inicio</a>
-        <a href="tabela.html">Cadastro</a>
+        <h4>Bem vindo</h4>
+        <!-- <a href="index.html">Inicio</a>
+        <a href="tabela.html">Cadastro</a> -->
 
        
 
@@ -51,6 +52,18 @@
     
                 <button id="btn-salvar" onclick="produto.salvar()">Salvar</button>
                 <button onclick="produto.cancelar()">Cancelar</button>
+            </div>
+
+            <div class="content">
+                <table border="1">
+                    <thead>
+                        <th>ID</th> <th>Data </th> <th>Cliente</th> <th>Produto</th> <th>Valor</th> <th>Pagamento</th> <th>ações</th>
+                    </thead>
+    
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
             </div>
             
           

@@ -1,8 +1,12 @@
 *{
     margin: 0;
     color: rgb(29, 27, 24);
-    background-color: rgba(255, 255, 255, 0.596);
+    background-color: #fafafa;
     margin-left: 4px;
+}
+main{
+    display: flex;
+    flex-direction: column;
 }
    
    a{
@@ -47,14 +51,12 @@ main .title{
     padding: 30px 50px;
 }
 main .card{
-    position: absolute;
-    width: 520px;
-    align-items: flex-start;
+    max-width: 400px;
+	margin: 3px auto;
     background-color: #839fdb54;
     border: rgb(99, 98, 98) solid;
     padding: 20px;
-    margin: 18px 15%;
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: 2px 2px 2px 2px #7684ac;
     justify-content: center;
     height: 80vh;
@@ -104,7 +106,7 @@ button:hover{
 
 }
 .content{
-    margin-top: 15px;
+    margin: 15px 4%;
 
 }
 table{
