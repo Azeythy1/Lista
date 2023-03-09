@@ -1,0 +1,175 @@
+class Produto {
+    constructor(){
+       this.id=1;
+        this.arrayProdutos = [];
+        this.editId =null;
+
+    }
+
+    salvar(){
+        let produto = this.lerDados();
+
+        if(this.validaCampos(produto)){
+            if(this.editId == null){
+                this.adicionar(produto);
+            }else{
+                this.atualizar(this.editId,  produto);
+            }
+            
+        }
+
+        this.listaTabela();
+        this.cancelar();
+        
+    }
+    listaTabela(){
+        let tbody = document.getElementById('tbody');
+        tbody.innerText ='';
+
+        for(let i = 0; i < this.arrayProdutos.length; i++){
+            let tr = tbody.insertRow();
+
+            let td_id = tr.insertCell();
+            let td_data = tr.insertCell();
+            let td_cliente = tr.insertCell();
+            let td_produto = tr.insertCell();
+            let td_valor = tr.insertCell();
+            let td_pagamento = tr.insertCell(); 
+            let td_acoes= tr.insertCell();
+
+
+            
+            td_id.innerText = this.arrayProdutos[i].id;
+            td_data.innerText = this.arrayProdutos[i].data;
+            td_cliente.innerText = this.arrayProdutos[i].nomeCliente;
+            td_produto.innerText = this.arrayProdutos[i].nomeProduto;
+            td_valor.innerText = this.arrayProdutos[i].valor;
+            td_pagamento.innerText = this.arrayProdutos[i].formaPagamento;
+
+            td_id.classList.add('center');
+
+            let imgEdit = document.createElement('img');
+            imgEdit.src ='img/editar.png';
+            imgEdit.setAttribute("onclick","produto.preparaEdicao("+ JSON.stringify(this.arrayProdutos[i]) +")"); 
+           
+
+            let imgDelet = document.createElement('img');
+            imgDelet.src ='img/excluir.png';
+            imgDelet.setAttribute("onclick","produto.deletar("+this.arrayProdutos[i].id+")");
+
+            td_acoes.appendChild(imgEdit);
+            td_acoes.appendChild(imgDelet);
+
+            
+
+        }
+
+    }
+
+    adicionar(produto){
+        produto.preco =parseFloat(produto.preco);
+        this.arrayProdutos.push(produto);
+        this.id++;
+
+    }
+
+    atualizar(id, produto){
+        for(let i = 0;i<this.arrayProdutos.length;i++){
+            if(this.arrayProdutos[i].id == id) {
+                this.arrayProdutos[i].data = produto.data;
+                this.arrayProdutos[i].nomeProduto = produto.nomeProduto;
+                this.arrayProdutos[i].nomeCliente = produto.nomeCliente;
+                this.arrayProdutos[i].valor = produto.valor;
+                this.arrayProdutos[i].formaPagamento = produto.formaPagamento;
+            }
+        }
+    }
+
+    preparaEdicao(dados){
+        this.editId= dados.id;
+
+        document.getElementById('data').value = dados.data;
+        document.getElementById('cliente').value = dados.nomeCliente;
+        document.getElementById('produto').value = dados.nomeProduto;
+        document.getElementById('valor').value = dados.valor;
+        document.getElementById('pagamento').value = dados.formaPagamento;
+
+        document.getElementById('btn-salvar').innerText ='Atualizar';
+    }
+
+    lerDados(){
+        let produto = {}
+
+            produto.id =this.id;
+            produto.data = document.getElementById('data').value;
+            produto.nomeCliente  = document.getElementById('cliente').value;
+            produto.nomeProduto  = document.getElementById('produto').value;
+            produto.valor  = document.getElementById('valor').value;
+            produto.formaPagamento  = document.getElementById('pagamento').value;
+
+            return produto;
+        
+        
+    }
+
+    validaCampos(produto){
+        let msg = '';
+
+        if(produto.data == ''){
+            msg +='- informe a data \n';
+        }
+
+        if(produto.nomeCliente == ''){
+            msg +='- informe nome do Cliente \n';
+        }
+
+        if(produto.nomeProduto == ''){
+            msg +='- informe nome do Produto \n';
+        }
+
+        if(produto.valor == ''){
+            msg +='- informe o valor \n';
+        }
+
+        if(produto.formaPagamento == ''){
+            msg +='- informe a forma de pagamento \n';
+        }
+
+        if(msg != '') {
+            alert(msg);
+            return false;
+        }
+        return true;
+    }
+
+
+    cancelar(){
+        document.getElementById('data').value ='';
+        document.getElementById('cliente').value ='';
+        document.getElementById('produto').value ='';
+        document.getElementById('valor').value ='';
+        document.getElementById('pagamento').value ='';
+
+        document.getElementById('btn-salvar').innerText ='Salvar';
+        this.editId = null;
+        
+    }
+
+    deletar(id){
+            if(confirm('Deletar produto ->'+id+'?')){
+                let tbody = document.getElementById('tbody');
+                for(let i = 0; i< this.arrayProdutos.length; i++){
+                    if(this.arrayProdutos[i].id == id){
+                        this.arrayProdutos.splice(i, 1);
+                        tbody.deleteRow(i);
+            }
+     
+            }
+        }
+        
+    }
+
+}
+
+
+var produto = new Produto();

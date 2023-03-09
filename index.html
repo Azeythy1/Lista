@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista</title>
+
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="css/sytle.css">
+
+</head>
+<body>
+   
+    <header>
+        <a href="index.html">Inicio</a>
+        <a href="tabela.html">Cadastro</a>
+
+       
+
+    </header>
+  
+
+        <main>
+       
+            <form  name="dados" method="POST" data-netlify="true" class="card" >
+                <span id="topo">Lista</span>
+    
+                <div class="lineInput">
+                    <label >Data</label>
+                    <input type="date" id="data" placeholder="Data">
+                </div>
+
+                <div class="lineInput">
+                    <label >Cliente</label>
+                    <input type="text" id="cliente" placeholder="Nome do Cliente">
+
+                </div>
+                <div class="lineInput">
+                    <label >Produto</label>
+                    <input type="text" id="produto" placeholder="Nome do produto">
+                </div>
+                <div class="lineInput">
+                    <label >Valor</label>
+                    <input type="number" id="valor" placeholder="Valor do produto">
+                </div>
+                <div class="lineInput">
+                    <label >Pagamento</label>
+                    <input type="text" id="pagamento" placeholder="Forma de pagamento">
+                </div>
+    
+                <button id="btn-salvar" onclick="produto.salvar()">Salvar</button>
+                <button onclick="produto.cancelar()">Cancelar</button>
+            </form>
+            
+          
+    
+    
+        </main>
+    
+</body>
+</html>
