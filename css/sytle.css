@@ -1,7 +1,7 @@
 *{
     margin: 0;
     color: rgb(29, 27, 24);
-    background-color: rgba(82, 172, 164, 0.219);
+    background-color: rgba(255, 255, 255, 0.596);
     margin-left: 4px;
 }
    
@@ -22,7 +22,7 @@
 .menu .efect{
     
     margin-right: 4%;
-    color: rgb(125, 149, 170);
+    color: rgb(166, 170, 125);
     background-color: rgba(90, 40, 40, 0);
     
 }
@@ -30,7 +30,7 @@ header {
     text-align: center;
     font-family: 'Tangerine', serif;
     font-size: 29px;
-    text-shadow: 4px 4px 4px #76aca4;
+    text-shadow: 4px 4px 4px #5f7199;
     
 }
 .title h2{
@@ -50,12 +50,12 @@ main .card{
     position: absolute;
     width: 520px;
     align-items: flex-start;
-    background-color: #d3db8354;
+    background-color: #839fdb54;
     border: rgb(99, 98, 98) solid;
     padding: 20px;
-    margin: 15px;
+    margin: 18px 15%;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #76aca4;
+    box-shadow: 2px 2px 2px 2px #7684ac;
     justify-content: center;
     height: 80vh;
 
@@ -70,19 +70,22 @@ main .card #topo{
 .lineInput{
     display: grid;
     margin-bottom: 10px;
-    border: rgb(88, 85, 85) solid;
+    border: rgb(43, 41, 41) solid;
+    border-radius: 40px;
 }
 
 input{
     padding: 10px;
-    border: 1px solid#ccc;
+    border: none;
     border-radius: 3px;
     outline: 0;
-    background-color: #FFF;
+    background-color:#ffffff00;
+    max-width: max-content;
 
 }
 label{
-    background-color: rgba(233, 227, 227, 0.911) ;
+    margin-left: 3%;
+    background-color: rgba(158, 203, 240, 0) ;
     font-weight: bold;
 }
 button{
@@ -90,14 +93,14 @@ button{
     padding: 10px;
     outline: 0;
     color: rgb(255, 254, 254) ;
-    background: rgb(88, 85, 85);
+    background: rgb(39, 47, 61);
     border-radius: 3px;
     font-weight: bold;
     transition: all ease 0.3ms;
 
 }
 button:hover{
-    background: rgb(61, 60, 60);
+    background: rgb(8, 36, 97);
 
 }
 .content{
@@ -110,7 +113,7 @@ table{
     width: 100%;
 }
 table th{
-    background-color: rgb(131, 119, 68);
+    background-color: rgb(68, 77, 131);
 }
 
 /* ----------------------------------------*/
@@ -122,7 +125,7 @@ table td img{
 }
 table td img:hover{
     width: 22px;
-    background: rgb(218, 75, 75);
+    background: rgb(75, 96, 218);
     
 }
 main .btn{
@@ -131,7 +134,7 @@ main .btn{
         padding: 10px;
         outline: 0;
         color: rgb(255, 254, 254) ;
-        background: rgb(88, 85, 85);
+        background: rgb(151, 12, 12);
         border-radius: 3px;
         font-weight: bold;
         transition: all ease 0.3ms;
