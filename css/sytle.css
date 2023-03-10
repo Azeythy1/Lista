@@ -51,7 +51,7 @@ main .title{
     padding: 30px 50px;
 }
 main .card{
-    width: 380px;
+    width: 250px;
     max-width: 400px;
 	margin: 3px auto;
     background-color: #839fdb54;
