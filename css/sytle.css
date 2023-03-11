@@ -35,6 +35,7 @@ header {
     font-family: 'Tangerine', serif;
     font-size: 29px;
     text-shadow: 4px 4px 4px #5f7199;
+    color: rgb(99, 18, 9) solid;
     
 }
 .title h2{
@@ -42,6 +43,7 @@ header {
     font-size: 56px;
     margin: 6px;  
     text-align: center;
+    color: rgb(99, 18, 9) solid;
 
 }
 
@@ -51,14 +53,14 @@ main .title{
     padding: 30px 50px;
 }
 main .card{
-    width: 250px;
+    width: 310px;
     max-width: 400px;
-	margin: 3px auto;
+	  margin: 3px auto;
     background-color: #839fdb54;
-    border: rgb(99, 98, 98) solid;
+    border: rgb(99, 18, 9) solid;
     padding: 20px;
     border-radius: 7px;
-    box-shadow: 2px 2px 2px 2px #7684ac;
+    box-shadow: 3px 3px 3px 4px #7684ac;
     justify-content: center;
     height: 70vh;
 
@@ -73,7 +75,7 @@ main .card #topo{
 .lineInput{
     display: grid;
     margin-bottom: 10px;
-    border: rgb(43, 41, 41) solid;
+    border: rgb(99, 18, 9) solid;
     border-radius: 40px;
 }
 
@@ -87,19 +89,20 @@ input{
 
 }
 label{
-    margin-left: 3%;
+    margin-left: 100px;
     background-color: rgba(158, 203, 240, 0) ;
     font-weight: bold;
+    color:rgb(99, 18, 9);
 }
 button{
-    border: 0px;
     padding: 10px;
     outline: 0;
-    color: rgb(255, 254, 254) ;
     background: rgb(39, 47, 61);
     border-radius: 3px;
     font-weight: bold;
+    border: rgb(99, 18, 9) solid;
     transition: all ease 0.3ms;
+    color: rgb(99, 18, 9) solid;
 
 }
 button:hover{
@@ -112,7 +115,7 @@ button:hover{
 }
 table{
     border-collapse: collapse;
-    border: 1px solid #ccc;
+    border:1px rgb(99, 18, 9) solid;
     width: 100%;
 }
 table th{
