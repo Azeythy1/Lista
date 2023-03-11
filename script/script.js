@@ -23,7 +23,7 @@ class Produto {
         
     }
     listaTabela(){
-        let tbody = document.getElementById('tbody');
+        let tbody = document.querySelector('#tbody');
         tbody.innerText ='';
 
         for(let i = 0; i < this.arrayProdutos.length; i++){
@@ -88,24 +88,24 @@ class Produto {
     preparaEdicao(dados){
         this.editId= dados.id;
 
-        document.getElementById('data').value = dados.data;
-        document.getElementById('cliente').value = dados.nomeCliente;
-        document.getElementById('produto').value = dados.nomeProduto;
-        document.getElementById('valor').value = dados.valor;
-        document.getElementById('pagamento').value = dados.formaPagamento;
+        document.querySelector('#data').value = dados.data;
+        document.querySelector('#cliente').value = dados.nomeCliente;
+        document.querySelector('#produto').value = dados.nomeProduto;
+        document.querySelector('#valor').value = dados.valor;
+        document.querySelector('#pagamento').value = dados.formaPagamento;
 
-        document.getElementById('btn-salvar').innerText ='Atualizar';
+        document.querySelector('#btn-salvar').innerText ='Atualizar';
     }
 
     lerDados(){
         let produto = {}
 
             produto.id =this.id;
-            produto.data = document.getElementById('data').value;
-            produto.nomeCliente  = document.getElementById('cliente').value;
-            produto.nomeProduto  = document.getElementById('produto').value;
-            produto.valor  = document.getElementById('valor').value;
-            produto.formaPagamento  = document.getElementById('pagamento').value;
+            produto.data = document.querySelector('#data').value;
+            produto.nomeCliente  = document.querySelector('#cliente').value;
+            produto.nomeProduto  = document.querySelector('#produto').value;
+            produto.valor  = document.querySelector('#valor').value;
+            produto.formaPagamento  = document.querySelector('#pagamento').value;
 
             return produto;
         
@@ -114,6 +114,7 @@ class Produto {
 
     validaCampos(produto){
         let msg = '';
+        
 
         if(produto.data == ''){
             msg +='- informe a data \n';
@@ -140,24 +141,25 @@ class Produto {
             return false;
         }
         return true;
+        
     }
 
 
     cancelar(){
-        document.getElementById('data').value ='';
-        document.getElementById('cliente').value ='';
-        document.getElementById('produto').value ='';
-        document.getElementById('valor').value ='';
-        document.getElementById('pagamento').value ='';
+        document.querySelector('#data').value ='';
+        document.querySelector('#cliente').value ='';
+        document.querySelector('#produto').value ='';
+        document.querySelector('#valor').value ='';
+        document.querySelector('#pagamento').value ='';
 
-        document.getElementById('btn-salvar').innerText ='Salvar';
+        document.querySelector('#btn-salvar').innerText ='Salvar';
         this.editId = null;
         
     }
 
     deletar(id){
             if(confirm('Deletar produto ->'+id+'?')){
-                let tbody = document.getElementById('tbody');
+                let tbody = document.querySelector('#tbody');
                 for(let i = 0; i< this.arrayProdutos.length; i++){
                     if(this.arrayProdutos[i].id == id){
                         this.arrayProdutos.splice(i, 1);
